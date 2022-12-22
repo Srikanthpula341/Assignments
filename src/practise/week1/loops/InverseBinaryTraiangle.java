@@ -16,21 +16,40 @@ public class InverseBinaryTraiangle {
 	}
 
 	private static void getPattern(int triangle) {
+		int count=0;
 	
-		for(int i=0;i<triangle;i++) {
+		for(int i=0;i<triangle;i=i+2) {
+			
 			for(int j=0;j<triangle;j++) {
+				
 				if(i<=j) {
-					if(i%2==0 ) {
-						System.out.print(0);
-					}else {
+					
+					if(count%2==0 ) {
+						
 						System.out.print(1);
+					}else {
+						System.out.print(0);
 					}
+					count++;
 				}else {
 					System.out.print(" ");
 				}
 			}
+			if(count%2==1) {
+				count++;
+			}else {
+				
+			}
 			System.out.println();
 		}
+//		int n=triangle;
+//		//int count=0;
+//		for(int i=1;i<n;i++) {
+//			for(int j=0;j<n;j++) {
+//				System.out.print(++count);
+//			}
+//			System.out.println();
+//		}
 	
 
 	}
